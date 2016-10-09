@@ -1,6 +1,8 @@
 ## JoinFiles
 This is an executable package for joining files (`cat` command equivalent).
 
+### Binary
+Windows binary can be found at `release\binary`
 ### Usage
 ```
 stack build
