@@ -1,8 +1,8 @@
 import qualified Test.Tasty
 import Test.Tasty.Hspec
-import Spec_joinFiles
+import Spec_accumJoinFiles
 
 main :: IO ()
 main = do
-    test <- testSpec "joinFiles" test_joinFiles
+    test <- testSpec "joinFiles" test_accumJoinFiles
     Test.Tasty.defaultMain test
