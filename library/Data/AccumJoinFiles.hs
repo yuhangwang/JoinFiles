@@ -20,7 +20,7 @@ parseData contents = aux 0 contents []
         aux offset (x:xs) accum = aux new_offset xs (item:accum)
             where 
                 item = parseLines offset x
-                new_offset = offset + (head (last item))
+                new_offset = head (last item)
 
 parseLines :: Float -> String -> [[Float]]
 parseLines offset body = map (parseLine offset) (lines body)
