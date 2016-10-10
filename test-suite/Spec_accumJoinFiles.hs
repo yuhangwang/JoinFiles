@@ -9,3 +9,6 @@ test_accumJoinFiles = parallel $ do
 
     it "accumJoinFiles [\"0.1 1\",\"0.1 2\"] should return \"0.1 1.0\\n0.2 2.0\"" $ do
         (accumJoinFiles ["0.1 1","0.1 2"]) `shouldBe` "0.1 1.0\n0.2 2.0"
+
+    it "accumJoinFiles [\"0.1 1\\n0.2 2\",\"0.1 2\"] should return \"0.1 1.0\\n0.2 2.0\\n0.3 2.0\"" $ do
+        (accumJoinFiles ["0.1 1\n0.2 2","0.1 2"]) `shouldBe` "0.1 1.0\n0.2 2.0\n0.3 2.0"
