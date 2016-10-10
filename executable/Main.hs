@@ -1,4 +1,4 @@
-import Data.JoinFiles
+import Data.AccumJoinFiles
 import System.Environment
 import System.Exit
 
@@ -21,7 +21,7 @@ exe [_] = do
 
 exe (output:inputs) = do
     dat <- loadData inputs
-    writeFile output (joinFiles dat)
+    writeFile output (accumJoinFiles dat)
 
 
 -- | Read files and store contents as array of big strings
